@@ -1,0 +1,10 @@
+"0","from vetiver import prepare_docker"
+"0","prepare_docker(b, 'penguin_model')"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+  File ""[90m]8;line = 150;file://C:\Users\C25Joshua.Pym\OneDrive - afacademy.af.edu\Documents\Final Project for Joshua Pym\.venv\Lib\site-packages\vetiver\write_docker.pyC:\Users\C25JOS~1.PYM\ONEDRI~1.EDU\DOCUME~1\FINALP~1\VENV~1\lib\site-packages\vetiver\write_docker.py]8;;[39m"", line 150, in prepare_docker
+    write_app(
+  File ""[90m]8;line = 104;file://C:\Users\C25Joshua.Pym\OneDrive - afacademy.af.edu\Documents\Final Project for Joshua Pym\.venv\Lib\site-packages\vetiver\write_fastapi.pyC:\Users\C25JOS~1.PYM\ONEDRI~1.EDU\DOCUME~1\FINALP~1\VENV~1\lib\site-packages\vetiver\write_fastapi.py]8;;[39m"", line 104, in write_app
+    f = open(file, ""x"")
+FileExistsError: [Errno 17] File exists: 'app.py'
+"

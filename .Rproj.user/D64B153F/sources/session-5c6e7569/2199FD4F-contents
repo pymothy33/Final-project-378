@@ -1,0 +1,57 @@
+---
+project:
+  type: website
+
+website:
+  title: "Final Project for Joshua Pym"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+title: "Penguins EDA"
+format:
+  html:
+    code-fold: true
+
+## Penguin Size and Mass by Sex and Species
+---
+
+```         
+```
+
+```{r}
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+
+df <- palmerpenguins::penguins
+```
+
+```{r}
+df %>%
+  group_by(species, sex) %>%
+  summarise(
+    across(
+      where(is.numeric), 
+      \(x) mean(x, na.rm = TRUE)
+      )
+    ) %>%
+  knitr::kable()
+```
+
+```{r}
+df %>%
+  ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+renv::snapshot()
+```

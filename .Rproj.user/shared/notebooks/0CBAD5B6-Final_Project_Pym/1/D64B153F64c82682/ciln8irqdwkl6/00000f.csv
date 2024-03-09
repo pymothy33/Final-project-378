@@ -1,0 +1,12 @@
+"0","from pins import board_folder"
+"0","from vetiver import vetiver_pin_write"
+"0","b = pins.board_folder('data/model', allow_pickle_read=True)"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'pins' is not defined
+"
+"0","p = vetiver_pin_write(b, v, versioned=True )"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'b' is not defined
+"

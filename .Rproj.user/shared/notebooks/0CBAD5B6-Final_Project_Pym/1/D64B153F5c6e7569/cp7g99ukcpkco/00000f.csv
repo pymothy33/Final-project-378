@@ -1,0 +1,7 @@
+"0","import logging"
+"0",""
+"0","logging.basicConfig("
+"0","    format='%(asctime)s - %(message)s',"
+"0","    level=logging.INFO"
+"0",")"
+"0",""

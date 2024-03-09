@@ -1,0 +1,12 @@
+"0","import duckdb"
+"0","from palmerpenguins import penguins"
+"0",""
+"0","con = duckdb.connect('my-db.duckdb')"
+"0","df = penguins.load_penguins()"
+"0","con.execute('CREATE TABLE penguins AS SELECT * FROM df')"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+duckdb.duckdb.CatalogException: Catalog Error: Table with name ""penguins"" already exists!
+"
+"0","con.close()"
+"0",""
