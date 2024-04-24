@@ -1,0 +1,8 @@
+"0","library(palmerpenguins)"
+"0","library(dplyr)"
+"0","library(ggplot2)"
+"0","Sys.setenv(RETICULATE_PYTHON = ""C:/Users/C25Joshua.Pym/OneDrive - afacademy.af.edu/Documents/Final Project for Joshua Pym/.venv/Scripts/python.exe"")"
+"0","library(reticulate)"
+"0","use_virtualenv(""C:/Users/C25Joshua.Pym/OneDrive - afacademy.af.edu/Documents/Final Project for Joshua Pym/.venv"",required=TRUE)"
+"0",""
+"0","df <- palmerpenguins::penguins"

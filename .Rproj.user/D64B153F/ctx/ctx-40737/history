@@ -1,0 +1,161 @@
+reticulate::repl_python()
+from vetiver import VetiverModel
+vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+quit
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+df %>%
+group_by(species, sex) %>%
+summarise(
+across(
+where(is.numeric),
+\(x) mean(x, na.rm = TRUE)
+)
+) %>%
+knitr::kable()
+df %>%
+ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+geom_point() +
+geom_smooth(method = "lm")
+renv::snapshot()
+install.packages("vetiver")
+library(vetiver)
+detach("package:vetiver", unload = TRUE)
+library(vetiver)
+reticulate::repl_python()
+from vetiver import VetiverModel
+vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
+quit
+detach("package:vetiver", unload = TRUE)
+reticulate::repl_python()
+from vetiver import VetiverModel
+v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
+quit
+library(vetiver)
+reticulate::repl_python()
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+quit
+df %>%
+group_by(species, sex) %>%
+summarise(
+across(
+where(is.numeric),
+\(x) mean(x, na.rm = TRUE)
+)
+) %>%
+knitr::kable()
+{r}
+df %>%
+ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+geom_point() +
+geom_smooth(method = "lm")
+renv::snapshot()
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+reticulate::repl_python()
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+library(vetiver)
+reticulate::repl_python()
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+quit
+install.packages("renv")
+install.packages("reticulate")
+library(vetiver)
+library(renv)
+library(reticulate)
+reticulate::repl_python()
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_model(model, model_name='penguin_model', prototype_data=X)
+renv::init()
+renv::init()
+renv::init()
+renv::snapshot()
+init()
+init {renv}
+init{renv}
+quit
+renv::init()
+renv::snapshot()
+reticulate::repl_python()
+from vetiver import VetiverModel
+v = vetiver_model(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+python -m venv <dir>
+quit
+python -m venv <dir>
+python -m venv<dir>
+python -m venv<dir>
+python-m venv<dir>
+py -m pip install vetiver_pin_write()
+py-m pip install vetiver
+py -m pip install vetiver
+reticulate::repl_python()
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+quit
+library(reticulate)
+use_virtualenv("path/to/myenv", required = TRUE)
+reticulate::repl_python()
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = Vetiver_Model(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = Vetiver_Model(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = vetiver_pin_write(model, model_name='penguin_model', prototype_data=X)
+quit
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+df %>%
+group_by(species, sex) %>%
+summarise(
+across(
+where(is.numeric),
+\(x) mean(x, na.rm = TRUE)
+)
+) %>%
+knitr::kable()
+install.packages("palmerpenguins")

@@ -1,0 +1,33 @@
+"0","import requests"
+"0","from request import post"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+  File ""[90m]8;line = 119;file://C:\Users\C25Joshua.Pym\AppData\Local\R\win-library\4.2\reticulate\python\rpytools\loader.pyC:\Users\C25Joshua.Pym\AppData\Local\R\win-library\4.2\reticulate\python\rpytools\loader.py]8;;[39m"", line 119, in _find_and_load_hook
+    return _run_hook(name, _hook)
+  File ""[90m]8;line = 93;file://C:\Users\C25Joshua.Pym\AppData\Local\R\win-library\4.2\reticulate\python\rpytools\loader.pyC:\Users\C25Joshua.Pym\AppData\Local\R\win-library\4.2\reticulate\python\rpytools\loader.py]8;;[39m"", line 93, in _run_hook
+    module = hook()
+  File ""[90m]8;line = 117;file://C:\Users\C25Joshua.Pym\AppData\Local\R\win-library\4.2\reticulate\python\rpytools\loader.pyC:\Users\C25Joshua.Pym\AppData\Local\R\win-library\4.2\reticulate\python\rpytools\loader.py]8;;[39m"", line 117, in _hook
+    return _find_and_load(name, import_)
+ModuleNotFoundError: No module named 'request'
+"
+"0","from req import json"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+ImportError: cannot import name 'json' from 'req' (C:\Users\C25JOS~1.PYM\ONEDRI~1.EDU\DOCUME~1\FINALP~1\VENV~1\lib\site-packages\req.py)
+"
+"0","req_data = {"
+"0","  ""bill_length_mm"": 0,"
+"0","  ""species_Chinstrap"": False,"
+"0","  ""species_Gentoo"": False,"
+"0","  ""sex_male"": False"
+"0","}"
+"0","req = post('http://127.0.0.1:8080/predict', json = [req_data])"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'post' is not defined
+"
+"0","res = json().get('predict')[0]"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'json' is not defined
+"
