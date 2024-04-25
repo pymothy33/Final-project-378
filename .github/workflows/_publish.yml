@@ -12,7 +12,7 @@ jobs:
       contents: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3 # Update to the latest version
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -31,7 +31,7 @@ jobs:
           RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.rstudio.com/all/latest
 
       - name: Install Python and Dependencies
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # Update to the latest version that supports Node.js 20
         with:
           python-version: '3.9'
           cache: 'pip'
@@ -43,4 +43,4 @@ jobs:
         with:
           target: gh-pages
         env:
-          GITHUB_AUTH_TOKEN: ${{ secrets.GITHUB_AUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
