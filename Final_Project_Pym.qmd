@@ -120,7 +120,7 @@ app = VetiverAPI(v, check_prototype=True)
 
 ```{python}
 from vetiver import prepare_docker
-prepare_docker(b, "penguin_model")
+prepare_docker(b, 'penguin_model')
 
 ```
 
@@ -146,8 +146,6 @@ con.close()
 
 ```{python}
 import requests
-from request import post
-from req import json
 req_data = {
   "bill_length_mm": 0,
   "species_Chinstrap": False,
@@ -158,4 +156,91 @@ req = requests.post('http://127.0.0.1:8080/predict', json = [req_data])
 res = req.json().get('predict')[0]
 ```
 
-## 
+## Chapter 4
+
+```{python}
+import logging
+
+logging.basicConfig(
+    format='%(asctime)s - %(message)s',
+    level=logging.INFO
+)
+```
+
+```{python}
+def server(input, output, session):
+    logging.info("App start")
+
+    @reactive.Calc
+    def vals():
+        d = {
+            "bill_length_mm" : input.bill_length(),
+            "sex_male" : input.sex() == "Male",
+            "species_Gentoo" : input.species() == "Gentoo", 
+            "species_Chinstrap" : input.species() == "Chinstrap"
+
+        }
+        return d
+    
+    @reactive.Calc
+    @reactive.event(input.predict)
+    def pred():
+        logging.info("Request Made")
+        r = requests.post(api_url, json = [vals()])
+        logging.info("Request Returned")
+
+        if r.status_code != 200:
+            logging.error("HTTP error returned")
+
+        return r.json().get('predict')[0]
+
+    @output
+    @render.text
+    def vals_out():
+        return f"{vals()}"
+
+    @output
+    @render.text
+    def pred_out():
+        return f"{round(pred())}"
+```
+
+## Chapter 5
+
+```{r}
+install.packages("quarto")
+library(quarto)
+quarto_render()
+```
+
+```{python}
+import duckdb
+from palmerpenguins import penguins
+
+con = duckdb.connect('my-db.duckdb')
+df = penguins.load_penguins()
+con.execute('CREATE TABLE penguins AS SELECT * FROM df')
+con.close()
+```
+
+```{python}
+con = duckdb.connect('my-db.duckdb')
+df = con.execute("SELECT * FROM penguins").fetchdf().dropna()
+con.close()
+```
+
+```{python}
+  @reactive.Calc
+  def vals():
+    d = {
+      "bill_length_mm" : input.bill_length(),
+      "sex_male" : input.sex() == "Male",
+      "species_Gentoo" : input.species() == "Gentoo", 
+      "species_Chinstrap" : input.species() == "Chinstrap"
+    }
+    return d
+```
+
+```{python}
+
+```
