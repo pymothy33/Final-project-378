@@ -2,13 +2,19 @@
 "0","from vetiver import vetiver_pin_write"
 "0","b = board_folder('data/model', allow_pickle_read=True)"
 "0","p = vetiver_pin_write(b, v, versioned=True )"
+"2","2024-04-24 23:14:34,362 - Model Cards provide a framework for transparent, responsible reporting. 
+ Use the vetiver `.qmd` Quarto template as a place to start, 
+ with vetiver.model_card()
+"
 "2","Model Cards provide a framework for transparent, responsible reporting. 
  Use the vetiver `.qmd` Quarto template as a place to start, 
- with vetiver.model_card()"
-"2","
+ with vetiver.model_card()
+"
+"2","2024-04-24 23:14:34,381 - Writing pin:
+Name: 'penguin_model'
+Version: 20240424T231434Z-a6f9b
 "
 "2","Writing pin:
 Name: 'penguin_model'
-Version: 20240424T225717Z-a6f9b"
-"2","
+Version: 20240424T231434Z-a6f9b
 "
