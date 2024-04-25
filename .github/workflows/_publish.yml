@@ -12,7 +12,7 @@ jobs:
       contents: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4 # Update to the latest version
+        uses: actions/checkout@v4
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -31,13 +31,17 @@ jobs:
           RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.rstudio.com/all/latest
 
       - name: Install Python and Dependencies
-        uses: actions/setup-python@v5 # Update to the latest version that supports Node.js 20
+        uses: actions/setup-python@v3
         with:
           python-version: '3.9'
           cache: 'pip'
       - run: pip install jupyter
       - run: pip install -r requirements.txt
 
+      - name: Install R dependencies
+        run: |
+          install.packages('reticulate')
+          
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
